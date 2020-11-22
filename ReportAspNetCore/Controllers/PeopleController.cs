@@ -14,9 +14,9 @@ namespace ReportAspNetCore.Controllers
 {
     public class PeopleController : Controller
     {
-        private readonly ReportAspNetCoreContext _context;
+        private readonly Data.DatabaseContext _context;
 
-        public PeopleController(ReportAspNetCoreContext context)
+        public PeopleController(Data.DatabaseContext context)
         {
 
             _context = context;
@@ -31,7 +31,7 @@ namespace ReportAspNetCore.Controllers
         // GET: People
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Person.ToListAsync());
+            return View(await _context.Users.ToListAsync());
         }
 
         public IActionResult PrintPage()
@@ -43,7 +43,7 @@ namespace ReportAspNetCore.Controllers
         {
             StiReport report = new StiReport();
             report.Load(StiNetCoreHelper.MapPath(this, "wwwroot/Reports/Report.mrt"));
-            var persons = _context.Person.ToList();
+            var persons = _context.Users.ToList();
             report.RegData("dt", persons);
             return StiNetCoreViewer.GetReportResult(this, report);
         }
@@ -52,7 +52,7 @@ namespace ReportAspNetCore.Controllers
         {
             StiReport report = new StiReport();
             report.Load(StiNetCoreHelper.MapPath(this, "wwwroot/Reports/Report2.mrt"));
-            var persons = _context.Person.First();
+            var persons = _context.Users.First();
             report.RegData("dt", persons);
             return StiNetCoreViewer.GetReportResult(this, report);
         }
@@ -62,14 +62,14 @@ namespace ReportAspNetCore.Controllers
             return StiNetCoreViewer.ViewerEventResult(this);
         }
         // GET: People/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Person
+            var person = await _context.Users
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (person == null)
             {
@@ -109,7 +109,7 @@ namespace ReportAspNetCore.Controllers
                 return NotFound();
             }
 
-            var person = await _context.Person.FindAsync(id);
+            var person = await _context.Users.FindAsync(id);
             if (person == null)
             {
                 return NotFound();
@@ -120,47 +120,47 @@ namespace ReportAspNetCore.Controllers
         // POST: People/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FullName,Email,Mobile")] Person person)
-        {
-            if (id != person.Id)
-            {
-                return NotFound();
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(Guid id, [Bind("Id,FullName,Email,Mobile")] Data.DatabaseContext person)
+        //{
+        //    if (id != person.Id)
+        //    {
+        //        return NotFound();
+        //    }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(person);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PersonExists(person.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(person);
-        }
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            _context.Update(person);
+        //            await _context.SaveChangesAsync();
+        //        }
+        //        catch (DbUpdateConcurrencyException)
+        //        {
+        //            if (!PersonExists(person.Id))
+        //            {
+        //                return NotFound();
+        //            }
+        //            else
+        //            {
+        //                throw;
+        //            }
+        //        }
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(person);
+        //}
 
         // GET: People/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Person
+            var person = await _context.Users
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (person == null)
             {
@@ -175,15 +175,15 @@ namespace ReportAspNetCore.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var person = await _context.Person.FindAsync(id);
-            _context.Person.Remove(person);
+            var person = await _context.Users.FindAsync(id);
+            _context.Users.Remove(person);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PersonExists(int id)
+        private bool PersonExists(Guid id)
         {
-            return _context.Person.Any(e => e.Id == id);
+            return _context.Users.Any(e => e.Id == id);
         }
     }
 }

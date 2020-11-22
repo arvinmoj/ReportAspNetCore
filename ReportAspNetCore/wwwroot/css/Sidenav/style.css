@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: BYas,'BYas',tahoma;
+  font-size: 15px;
+}
+
+
+body {
+  font-family: "Lato", sans-serif;
+}
+.menu {
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    margin-right : 10px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: black;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.page-item.active .page-link {
+  background-color: lightgrey !important;
+  border: 1px solid black;
+}
+.page-link {
+  color: black !important;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.input-container {
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.input{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.input > div{
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 20px;
+  width: 25%;
+}
+
+.label{
+  margin-left: 10px ;
+}
+
+.inputDate {
+  font-family: BYas,'BYas',tahoma;
+  width: 145px;
+}
+
+.spanDate {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: black;
+}

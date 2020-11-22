@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Models
 {
     [Table("GetData")]
-    class GetData
+    public class GetData
     {
         public GetData() : base()
         {

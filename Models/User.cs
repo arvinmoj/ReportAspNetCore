@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Models
 {
     [Table("User")]
-    class User
+    public class User
     {
         public User() : base()
         {
@@ -37,7 +37,7 @@ namespace Models
         [Required(ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.Required))]
         [RegularExpression(@"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}",
-            ErrorMessageResourceType = typeof (Resources.ErrorMessages) ,
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.CorrectEmail))]
         public string Email { get; set; }
         // *****

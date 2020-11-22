@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ReportAspNetCore.Models;
+using Data;
 
 namespace ReportAspNetCore
 {
@@ -35,7 +36,7 @@ namespace ReportAspNetCore
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<ReportAspNetCoreContext>(options =>
+            services.AddDbContext<DatabaseContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ReportAspNetCoreContext")));
         }
 
