@@ -83,6 +83,14 @@ String.prototype.toEnglishDigit = function () {
     return replaceString;
 }
 
+function convertNumber()
+{
+    var getNumber = $("#inputDate3").val();
+    var convertToEN = getNumber.toEnglishDigit();
+    var selectYear = convertToEN.substring(2 , 10);
+    $("#inputDate3:text").val(selectYear);
+}
+
 function Click() {
 
     var date = document.querySelector('[aria-label="date3"]').value;
@@ -99,16 +107,16 @@ function Click() {
     if (yearpersionDate === dateTime) {
 
         if (MonthPersion === "01" || MonthPersion === "02" || MonthPersion === "03") {
-            document.getElementById('SetDate').value = "بهار" + " " + yearsDateTime;
+            document.getElementById('SetDate').value = "بهار" + " " + yearsDateTime.toEnglishDigit();
         }
         if (MonthPersion === "04" || MonthPersion === "05" || MonthPersion === "06") {
-            document.getElementById('SetDate').value = "تابستان" + " " + yearsDateTime;
+            document.getElementById('SetDate').value = "تابستان" + " " + yearsDateTime.toEnglishDigit();
         }
         if (MonthPersion === "07" || MonthPersion === "08" || MonthPersion === "09") {
-            document.getElementById('SetDate').value = "پاییز" + " " + yearsDateTime;
+            document.getElementById('SetDate').value = "پاییز" + " " + yearsDateTime.toEnglishDigit();
         }
         if (MonthPersion === "10" || MonthPersion === "11" || MonthPersion === "12") {
-            document.getElementById('SetDate').value = "زمستان" + " " + yearsDateTime;
+            document.getElementById('SetDate').value = "زمستان" + " " + yearsDateTime.toEnglishDigit();
         }
     }
     else {
