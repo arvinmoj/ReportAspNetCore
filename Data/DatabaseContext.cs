@@ -15,5 +15,6 @@ namespace Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<GetData> GetDatas { get; set; }
+        public DbSet<GetName> GetNames { get; set; }
     }
 }

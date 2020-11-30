@@ -10,6 +10,7 @@ using ReportAspNetCore.Models;
 
 namespace ReportAspNetCore.Controllers
 {
+    [Route("Home")]
     public class HomeController : Controller
     {
         private readonly DatabaseContext _databaseContext;
@@ -19,6 +20,9 @@ namespace ReportAspNetCore.Controllers
             _databaseContext = DatabaseContext;
         }
         
+        [Route("")]
+        [Route("Index")]
+        [Route("~/")]
         [HttpGet]
         public IActionResult Index()
         {
@@ -27,6 +31,7 @@ namespace ReportAspNetCore.Controllers
             return View(displaydata);
         }
 
+        [Route("Index")]
         [HttpPost]
         public async Task<IActionResult> Index(GetData data)
         {
@@ -38,6 +43,14 @@ namespace ReportAspNetCore.Controllers
                 return RedirectToAction("Index");
             }
             return View(data);
+        }
+
+        [Route("GetNameByCode")]
+        public IActionResult GetNameByCode(string code) 
+        {
+            var datalist = _databaseContext.GetNames.Where(u => u.Code == code).ToList();
+
+            return new JsonResult(datalist);
         }
     }
 }

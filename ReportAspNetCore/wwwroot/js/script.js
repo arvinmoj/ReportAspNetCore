@@ -1,6 +1,22 @@
-$("#date3").MdPersianDateTimePicker({
-    targetTextSelector: "#inputDate3",
-    monthsToShow: [1, 1],
+$(document).ready(function () {
+    $("#date3").MdPersianDateTimePicker({
+        targetTextSelector: "#inputDate3",
+        monthsToShow: [1, 1],
+    });
+});
+
+$(document).ready(function () {
+    $("#nameInput").click(function (e) {
+        $.ajax({
+            url: "/Home/GetNameByCode",
+            method: "Get",
+            data: { code: $('#codeInput').val() }
+        }).done(function (res) {
+            $.each(res, function (index, value) {
+                $('#nameInput').val(value.name);
+            });
+        });
+    });
 });
 
 $(document).ready(function () {
@@ -83,11 +99,10 @@ String.prototype.toEnglishDigit = function () {
     return replaceString;
 }
 
-function convertNumber()
-{
+function convertNumber() {
     var getNumber = $("#inputDate3").val();
     var convertToEN = getNumber.toEnglishDigit();
-    var selectYear = convertToEN.substring(2 , 10);
+    var selectYear = convertToEN.substring(2, 10);
     $("#inputDate3:text").val(selectYear);
 }
 
