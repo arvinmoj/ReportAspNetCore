@@ -6,11 +6,9 @@
     <DataSources isList="true" count="1">
       <dt Ref="2" type="DataTableSource" isKey="true">
         <Alias>dt</Alias>
-        <Columns isList="true" count="4">
-          <value>Id,System.String</value>
-          <value>FullName,System.String</value>
-          <value>Email,System.String</value>
-          <value>Mobile,System.String</value>
+        <Columns isList="true" count="2">
+          <value>ORIGINAL,Code,Code,Code,System.String,b6f8de9a13d0468199e819814237d4c8</value>
+          <value>Name,System.String</value>
         </Columns>
         <Dictionary isRef="1" />
         <Key>06f5163fb5c64465ae03b7207dbe481c</Key>
@@ -34,16 +32,14 @@
       <Components isList="true" count="1">
         <Tabledt Ref="4" type="Stimulsoft.Report.Components.Table.StiTable" isKey="true">
           <Brush>Transparent</Brush>
-          <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,0.2,7.72,0.9</ClientRectangle>
-          <ColumnCount>4</ColumnCount>
-          <Components isList="true" count="12">
+          <ClientRectangle>0,0.2,10.89,0.9</ClientRectangle>
+          <ColumnCount>2</ColumnCount>
+          <Components isList="true" count="6">
             <Tabledt_Cell1 Ref="5" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>GlassBrush,Gray,True,0.2</Brush>
-              <ClientRectangle>0,0,2,0.3</ClientRectangle>
+              <ClientRectangle>0,0,5.4,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,9</Font>
+              <Font>Arial,12,Bold</Font>
               <HorAlignment>Center</HorAlignment>
               <ID>0</ID>
               <JoinCells isList="true" count="0" />
@@ -52,16 +48,16 @@
               <Page isRef="3" />
               <Parent isRef="4" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <Text>Id</Text>
+              <Text>کد استان</Text>
               <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Tabledt_Cell1>
             <Tabledt_Cell2 Ref="6" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>GlassBrush,Gray,True,0.2</Brush>
-              <ClientRectangle>2,0,1.9,0.3</ClientRectangle>
+              <ClientRectangle>5.4,0,5.49,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,9</Font>
+              <Font>Arial,12,Bold</Font>
               <HorAlignment>Center</HorAlignment>
               <ID>1</ID>
               <JoinCells isList="true" count="0" />
@@ -70,17 +66,16 @@
               <Page isRef="3" />
               <Parent isRef="4" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <Text>Full Name</Text>
+              <Text>نام</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Tabledt_Cell2>
             <Tabledt_Cell3 Ref="7" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>GlassBrush,Gray,True,0.2</Brush>
-              <ClientRectangle>3.9,0,1.9,0.3</ClientRectangle>
+              <Brush>White</Brush>
+              <ClientRectangle>0,0.3,5.4,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,9</Font>
+              <Font>Arial,12</Font>
               <HorAlignment>Center</HorAlignment>
               <ID>2</ID>
               <JoinCells isList="true" count="0" />
@@ -89,16 +84,15 @@
               <Page isRef="3" />
               <Parent isRef="4" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <Text>Email</Text>
+              <Text>{dt.Code}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </Tabledt_Cell3>
             <Tabledt_Cell4 Ref="8" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>GlassBrush,Gray,True,0.2</Brush>
-              <ClientRectangle>5.8,0,1.92,0.3</ClientRectangle>
+              <Brush>White</Brush>
+              <ClientRectangle>5.4,0.3,5.49,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,9</Font>
+              <Font>Arial,12</Font>
               <HorAlignment>Center</HorAlignment>
               <ID>3</ID>
               <JoinCells isList="true" count="0" />
@@ -107,17 +101,15 @@
               <Page isRef="3" />
               <Parent isRef="4" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <Text>Mobile</Text>
+              <Text>{dt.Name}</Text>
               <TextBrush>Black</TextBrush>
               <VertAlignment>Center</VertAlignment>
             </Tabledt_Cell4>
             <Tabledt_Cell5 Ref="9" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>White</Brush>
-              <ClientRectangle>0,0.3,2,0.3</ClientRectangle>
+              <ClientRectangle>0,0.6,5.4,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
               <ID>4</ID>
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
@@ -125,17 +117,13 @@
               <Page isRef="3" />
               <Parent isRef="4" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <Text>{dt.Id}</Text>
               <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
             </Tabledt_Cell5>
             <Tabledt_Cell6 Ref="10" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>White</Brush>
-              <ClientRectangle>2,0.3,1.9,0.3</ClientRectangle>
+              <ClientRectangle>5.4,0.6,5.49,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
               <ID>5</ID>
               <JoinCells isList="true" count="0" />
               <Margins>0,0,0,0</Margins>
@@ -143,123 +131,18 @@
               <Page isRef="3" />
               <Parent isRef="4" />
               <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <Text>{dt.FullName}</Text>
               <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
             </Tabledt_Cell6>
-            <Tabledt_Cell7 Ref="11" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>White</Brush>
-              <ClientRectangle>3.9,0.3,1.9,0.3</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
-              <ID>6</ID>
-              <JoinCells isList="true" count="0" />
-              <Margins>0,0,0,0</Margins>
-              <Name>Tabledt_Cell7</Name>
-              <Page isRef="3" />
-              <Parent isRef="4" />
-              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <Text>{dt.Email}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Tabledt_Cell7>
-            <Tabledt_Cell8 Ref="12" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>White</Brush>
-              <ClientRectangle>5.8,0.3,1.92,0.3</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
-              <ID>7</ID>
-              <JoinCells isList="true" count="0" />
-              <Margins>0,0,0,0</Margins>
-              <Name>Tabledt_Cell8</Name>
-              <Page isRef="3" />
-              <Parent isRef="4" />
-              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <Text>{dt.Mobile}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Tabledt_Cell8>
-            <Tabledt_Cell9 Ref="13" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>White</Brush>
-              <ClientRectangle>0,0.6,2,0.3</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
-              <ID>8</ID>
-              <JoinCells isList="true" count="0" />
-              <Margins>0,0,0,0</Margins>
-              <Name>Tabledt_Cell9</Name>
-              <Page isRef="3" />
-              <Parent isRef="4" />
-              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Tabledt_Cell9>
-            <Tabledt_Cell10 Ref="14" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>White</Brush>
-              <ClientRectangle>2,0.6,1.9,0.3</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
-              <ID>9</ID>
-              <JoinCells isList="true" count="0" />
-              <Margins>0,0,0,0</Margins>
-              <Name>Tabledt_Cell10</Name>
-              <Page isRef="3" />
-              <Parent isRef="4" />
-              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Tabledt_Cell10>
-            <Tabledt_Cell11 Ref="15" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>White</Brush>
-              <ClientRectangle>3.9,0.6,1.9,0.3</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
-              <ID>10</ID>
-              <JoinCells isList="true" count="0" />
-              <Margins>0,0,0,0</Margins>
-              <Name>Tabledt_Cell11</Name>
-              <Page isRef="3" />
-              <Parent isRef="4" />
-              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Tabledt_Cell11>
-            <Tabledt_Cell12 Ref="16" type="TableCell" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>White</Brush>
-              <ClientRectangle>5.8,0.6,1.92,0.3</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,9</Font>
-              <HorAlignment>Center</HorAlignment>
-              <ID>11</ID>
-              <JoinCells isList="true" count="0" />
-              <Margins>0,0,0,0</Margins>
-              <Name>Tabledt_Cell12</Name>
-              <Page isRef="3" />
-              <Parent isRef="4" />
-              <Restrictions>AllowMove, AllowSelect, AllowChange</Restrictions>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Tabledt_Cell12>
           </Components>
           <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
           <DataSourceName>dt</DataSourceName>
           <Filters isList="true" count="0" />
           <FooterRowsCount>1</FooterRowsCount>
           <HeaderRowsCount>1</HeaderRowsCount>
           <MinHeight>0.30000000000000004</MinHeight>
           <Name>Tabledt</Name>
-          <NumberID>12</NumberID>
+          <NumberID>6</NumberID>
           <Page isRef="3" />
           <Parent isRef="3" />
           <RowCount>3</RowCount>
@@ -268,11 +151,12 @@
       </Components>
       <Conditions isList="true" count="0" />
       <Guid>93c43bc25e8e4713b5fae93999ef8ee3</Guid>
-      <Margins>0.39,0.39,0.39,0.39</Margins>
+      <Margins>0.4,0.4,0.4,0.4</Margins>
       <Name>Page1</Name>
-      <PageHeight>11</PageHeight>
-      <PageWidth>8.5</PageWidth>
-      <PaperSize>Letter</PaperSize>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>8.27</PageHeight>
+      <PageWidth>11.69</PageWidth>
+      <PaperSize>A4</PaperSize>
       <Report isRef="0" />
     </Page1>
   </Pages>
@@ -287,10 +171,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>11/21/2020 10:32:48 PM</ReportChanged>
+  <ReportChanged>11/30/2020 11:36:31 PM</ReportChanged>
   <ReportCreated>4/6/2019 10:38:55 AM</ReportCreated>
   <ReportFile>C:\Users\mojav\Desktop\ReportAspCore\ReportAspNetCore\ReportAspNetCore\wwwroot\Reports\Report.mrt</ReportFile>
-  <ReportGuid>225c8da306a84a4e93d6746e0a59ad82</ReportGuid>
+  <ReportGuid>89031cdc757d4b2f8e61d19d03cd6347</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Inches</ReportUnit>
   <ReportVersion>2020.4.1.0</ReportVersion>
