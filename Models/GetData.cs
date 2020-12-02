@@ -46,87 +46,87 @@ namespace Models
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.ContractNumber))]
-        public string ContractNumber { get; set; }
+        public int? ContractNumber { get; set; }
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.ContractCount))]
-        public string ContractCount { get; set; }
+        public int? ContractCount { get; set; }
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.NoContractCount))]
-        public string NoContractCount { get; set; }
+        public int? NoContractCount { get; set; }
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.InvoiceNumber))]
-        public string InvoiceNumber { get; set; }
+        public int? InvoiceNumber { get; set; }
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.Count))]
-        public string Count { get; set; }
+        public int? Count { get; set; }
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.PerSale))]
-        public string PerSale { get; set; }
+        public int? PerSale { get; set; }
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.NetSales))]
-        public string NetSales { get; set; }
+        public int? NetSales { get; set; }
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.Discount))]
-        public string Discount { get; set; }
+        public int? Discount { get; set; }
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.SalesTax))]
-        public string SalesTax { get; set; }
+        public int? SalesTax { get; set; }
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.ReturnedCount))]
-        public string ReturnedCount { get; set; }
+        public int? ReturnedCount { get; set; }
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.RefundAmount))]
-        public string RefundAmount { get; set; }
+        public int? RefundAmount { get; set; }
         // *****
 
         // *****
-        [MaxLength(150)]
+        //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.ReceivedMoney))]
-        public string ReceivedMoney { get; set; }
+        public int? ReceivedMoney { get; set; }
         // *****
     }
 }

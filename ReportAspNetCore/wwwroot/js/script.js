@@ -1,3 +1,20 @@
+function Sales()
+{
+    var Count = document.getElementById("Count").value;
+    var PerSale = document.getElementById("PerSale").value;
+    var Sales = Count*PerSale;
+    document.getElementById("NetSales").value = Sales;
+}
+
+function Tax()
+{
+    var Sales = document.getElementById("NetSales").value;
+    var Discount = document.getElementById("Discount").value;
+    var ValueDiscount = Sales - Discount;
+    var Value = ValueDiscount * 109 / 100;
+    document.getElementById("SalesTax").value = Value;
+}
+
 $(document).ready(function () {
     $("#date3").MdPersianDateTimePicker({
         targetTextSelector: "#inputDate3",
@@ -37,58 +54,58 @@ $(document).ready(function () {
     });
 });
 
-function separateNum(value, input) {
-    /* seprate number input 3 number */
-    var nStr = value + '';
-    nStr = nStr.replace(/\,/g, "");
-    x = nStr.split('.');
-    x1 = x[0];
-    x2 = x.length > 1 ? '.' + x[1] : '';
-    var rgx = /(\d+)(\d{3})/;
-    while (rgx.test(x1)) {
-        x1 = x1.replace(rgx, '$1' + ',' + '$2');
-    }
-    if (input !== undefined) {
+// number_3_3
+//function separateNum(value, input) {
+//    /* seprate number input 3 number */
+//    var nStr = value + '';
+//    nStr = nStr.replace(/\,/g, "");
+//    x = nStr.split('.');
+//    x1 = x[0];
+//    x2 = x.length > 1 ? '.' + x[1] : '';
+//    var rgx = /(\d+)(\d{3})/;
+//    while (rgx.test(x1)) {
+//        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+//    }
+//    if (input !== undefined) {
 
-        input.value = x1 + x2;
-    } else {
-        input.value = x1 + x2;
-    }
-}
+//        input.value = x1 + x2;
+//    } else {
+//        input.value = x1 + x2;
+//    }
+//}
 
-function number_3_3(num, sep) {
-    var number = typeof num === "number" ? num.toString() : num,
-        separator = typeof sep === "undefined" ? ',' : sep;
-    return number.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + separator);
-}
+//function number_3_3(num, sep) {
+//    var number = typeof num === "number" ? num.toString() : num,
+//        separator = typeof sep === "undefined" ? ',' : sep;
+//    return number.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + separator);
+//}
 
-function addComma(str) {
-    var objRegex = new RegExp('(-?[0-9]+)([0-9]{3})');
+//function addComma(str) {
+//    var objRegex = new RegExp('(-?[0-9]+)([0-9]{3})');
 
-    while (objRegex.test(str)) {
-        str = str.replace(objRegex, '$1,$2');
-    }
+//    while (objRegex.test(str)) {
+//        str = str.replace(objRegex, '$1,$2');
+//    }
 
-    return str;
-}
+//    return str;
+//}
 
-function removeComma(str) {
-    var myString = '',
-        chrCode;
+//function removeComma(str) {
+//    var myString = '',
+//        chrCode;
 
-    for (var i = str.length - 1; i >= 0; --i) {
-        chrCode = str.charCodeAt(i);
+//    for (var i = str.length - 1; i >= 0; --i) {
+//        chrCode = str.charCodeAt(i);
 
-        // 44 = comma
-        if (chrCode != 44) {
-            myString = String.fromCharCode(chrCode) + myString;
-        }
+//        // 44 = comma
+//        if (chrCode != 44) {
+//            myString = String.fromCharCode(chrCode) + myString;
+//        }
 
-    }
+//    }
 
-    return myString;
-}
-
+//    return myString;
+//}
 
 String.prototype.toEnglishDigit = function () {
     var find = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];

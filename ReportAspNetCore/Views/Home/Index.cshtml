@@ -55,27 +55,27 @@
 
             <div>
                 <label for="Count" class="label">تعداد</label>
-                <input name="Count" type="text" />
+                <input name="Count" id="Count" type="text" />
             </div>
 
             <div>
                 <label for="PerSale" class="label">فی فروش</label>
-                <input name="PerSale" type="text" onkeyup="separateNum(this.value,this);" />
+                <input name="PerSale" id="PerSale" type="text" onkeyup="separateNum(this.value,this);" />
             </div>
 
             <div>
                 <label for="NetSales" class="label">خالص فروش</label>
-                <input name="NetSales" type="text" onkeyup="separateNum(this.value,this);" />
+                <input name="NetSales" id="NetSales" type="text" onclick="Sales()" onkeyup="separateNum(this.value,this);" />
             </div>
 
             <div>
                 <label for="Discount" class="label">تخفیف</label>
-                <input name="Discount" type="text" onkeyup="separateNum(this.value,this);" />
+                <input name="Discount" id="Discount" type="text" onkeyup="separateNum(this.value,this);" />
             </div>
 
             <div>
                 <label for="SalesTax" class="label">فروش با ارزش افزوده</label>
-                <input name="SalesTax" type="text" onkeyup="separateNum(this.value,this);" />
+                <input name="SalesTax" id="SalesTax" type="text" onclick="Tax()" onkeyup="separateNum(this.value,this);" />
             </div>
 
             <div>
