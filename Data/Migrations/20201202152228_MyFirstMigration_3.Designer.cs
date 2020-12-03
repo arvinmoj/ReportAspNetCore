@@ -4,14 +4,16 @@ using Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Data.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20201202152228_MyFirstMigration_3")]
+    partial class MyFirstMigration_3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,26 +38,26 @@ namespace Data.Migrations
                     b.Property<string>("Date")
                         .HasMaxLength(150);
 
-                    b.Property<double?>("Discount");
+                    b.Property<long?>("Discount");
 
                     b.Property<int?>("InvoiceNumber");
 
                     b.Property<string>("Name")
                         .HasMaxLength(150);
 
-                    b.Property<double?>("NetSales");
+                    b.Property<long?>("NetSales");
 
                     b.Property<int?>("NoContractCount");
 
-                    b.Property<double?>("PerSale");
+                    b.Property<long?>("PerSale");
 
-                    b.Property<double?>("ReceivedMoney");
+                    b.Property<long?>("ReceivedMoney");
 
-                    b.Property<double?>("RefundAmount");
+                    b.Property<long?>("RefundAmount");
 
                     b.Property<int?>("ReturnedCount");
 
-                    b.Property<double?>("SalesTax");
+                    b.Property<long?>("SalesTax");
 
                     b.Property<string>("YearSeason")
                         .HasMaxLength(150);

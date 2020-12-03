@@ -84,28 +84,28 @@ namespace Models
         //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.PerSale))]
-        public int? PerSale { get; set; }
+        public double? PerSale { get; set; }
         // *****
 
         // *****
         //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.NetSales))]
-        public int? NetSales { get; set; }
+        public double? NetSales { get; set; }
         // *****
 
         // *****
         //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.Discount))]
-        public int? Discount { get; set; }
+        public double? Discount { get; set; }
         // *****
 
         // *****
         //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.SalesTax))]
-        public int? SalesTax { get; set; }
+        public double? SalesTax { get; set; }
         // *****
 
         // *****
@@ -119,14 +119,14 @@ namespace Models
         //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.RefundAmount))]
-        public int? RefundAmount { get; set; }
+        public double? RefundAmount { get; set; }
         // *****
 
         // *****
         //[MaxLength(150)]
         [Display(ResourceType = typeof(Resources.GetData),
             Name = nameof(Resources.GetData.ReceivedMoney))]
-        public int? ReceivedMoney { get; set; }
+        public double? ReceivedMoney { get; set; }
         // *****
     }
 }
