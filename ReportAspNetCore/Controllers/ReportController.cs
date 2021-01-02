@@ -35,6 +35,22 @@ namespace ReportAspNetCore.Controllers
 
         public IActionResult PrintPage()
         {
+            System.Globalization.PersianCalendar persianCalandar =
+              new System.Globalization.PersianCalendar();
+
+            int year = persianCalandar.GetYear(DateTime.Now);
+            int month = persianCalandar.GetMonth(DateTime.Now);
+            int day = persianCalandar.GetDayOfMonth(DateTime.Now);
+
+            var datePersian = ($"{year}/{month}/{day}");
+
+
+            var date = _context.GetDatas.ToArray();
+
+            var select = _context.GetDatas.Select(c => c.Date.Substring(0, 2)).Distinct();
+
+            ViewBag.ListofCountry = select;
+
             return View("PrintPage");
         }
 
