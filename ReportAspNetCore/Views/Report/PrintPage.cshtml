@@ -4,6 +4,12 @@
     ViewData["Title"] = "Print";
 }
 
+@foreach (var item in ViewBag.Years)
+{
+    <a type="button" class="btn btn-primary" href="#">@item</a>
+}
+
+
 @Html.StiNetCoreViewer(new StiNetCoreViewerOptions()
 {
     Actions =
@@ -12,4 +18,3 @@
         ViewerEvent = "ViewerEvent"
     }
 })
-

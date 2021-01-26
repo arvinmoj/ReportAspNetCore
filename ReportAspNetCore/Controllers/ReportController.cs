@@ -49,7 +49,7 @@ namespace ReportAspNetCore.Controllers
 
             var select = _context.GetDatas.Select(c => c.Date.Substring(0, 2)).Distinct();
 
-            ViewBag.ListofCountry = select;
+            ViewBag.Years = select;
 
             return View("PrintPage");
         }
